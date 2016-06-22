@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+ </head>
+
+ <body>
+  <input id="orderDate" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="" class="input-text Wdate" style="width:200px;">
+
+  <script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+  <script type="text/javascript">
+	//格式化日期为默认日期
+	var d = new Date();
+	function addzero(v) {if (v < 10) return '0' + v;return v.toString();}
+	var s = d.getFullYear().toString() +'-'+ addzero(d.getMonth() + 1) +'-'+ addzero(d.getDate()) + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+	var month = addzero(d.getMonth() + 1);
+	document.getElementById('orderDate').value=s;
+  </script>
+ </body>
+</html>
